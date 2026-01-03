@@ -11,15 +11,16 @@ import chromadb
 from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
 from groq import Groq
+import streamlit as st
 from dotenv import load_dotenv
 
 # ================================
 # 🧩 ENV + CLIENTS
 # ================================
-load_dotenv()
-GROQ_MODEL = os.getenv("GROQ_MODEL")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+GROQ_MODEL = st.secrets["GROQ_MODEL"]
 
-groq_client = Groq()
+groq_client = Groq(api_key=GROQ_API_KEY)
 
 # ================================
 # 🧩 CONSTANTS
