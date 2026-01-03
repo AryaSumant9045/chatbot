@@ -22,6 +22,10 @@ GROQ_MODEL = st.secrets["GROQ_MODEL"]
 
 groq_client = Groq(api_key=GROQ_API_KEY)
 
+import streamlit as st
+
+st.write("KEY LOADED:", bool(st.secrets.get("GROQ_API_KEY")))
+st.write("MODEL:", st.secrets.get("GROQ_MODEL"))
 # ================================
 # 🧩 CONSTANTS
 # ================================
