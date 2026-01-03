@@ -5,7 +5,7 @@ from rajeev import main
 def ask(query):
     return main(query)
 
-st.title("Rajeev Dixit Chatbot")
+st.title("Rajiv Dixit Chatbot")
 
 query = st.chat_input("Write your query")
 
